@@ -50,16 +50,16 @@ async function fetchLbData(endpoint, params) {
 */
 async function getLbDataReduced(endpoint, params) {
     let lb = [];
-    
     const res = await fetchLbData(endpoint, params);
-    //res.data.players.data
     let playerIndex = 0;
     if (res && res.data && res.data.runs) {
         for(const pos of res.data.runs){
             let usernameLocation = null;
+
             try{
                 usernameLocation = res.data.players.data[playerIndex].names.international;
             } catch(error){
+                console.error(`Unknown player on place ${playerIndex+1}`)
             }
             
             const username = usernameLocation == null ? "unknown player" : usernameLocation;
