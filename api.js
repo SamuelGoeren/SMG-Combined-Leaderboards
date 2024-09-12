@@ -4,7 +4,7 @@
         of best times only regardless of mode: based on character filter
 */
 
-const { formatISO8601Duration } = require('./utils');
+const { formatISO8601Duration, arrayToCSV, writeCSVToFile } = require('./utils');
 
 //SRC's internal ID's for various parameters
 const CHARACTER = 'var-kn0m3zl3';
@@ -40,7 +40,6 @@ async function fetchLbData(endpoint, params) {
         return res;
         
     } catch (error) {
-        // Handle any errors that occur during the fetch operation
         console.error('Error fetching leaderboard data:', error);
     }
 }
@@ -71,9 +70,11 @@ async function getLbDataReduced(endpoint, params) {
     return lb;
 }
 
-async function print(endpoint, params){
+async function run(endpoint, params){
     const lb = await getLbDataReduced(endpoint, params);
-    console.log(lb);
+    const csvContent = arrayToCSV(lb);
+    writeCSVToFile("lb.csv", csvContent);
 }
+
 let params = {[CHARACTER]: LUIGI, embed: "players", top: 100}
-print(SMG1_LB_ANY_URL, params)
+run(SMG1_LB_ANY_URL, params)
