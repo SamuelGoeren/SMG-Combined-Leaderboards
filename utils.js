@@ -32,9 +32,15 @@ const CHAR_NAME_TO_ID_120 = {
 }
 
 //modes do not need to be specified because we want combined lbs
-const MODE = 'var-r0nwg08q';
+//but we need them to display in the output csv file
+const MODE = 'r0nwg08q';
 const COSTAR = 'g0q5n2qp';
 const NOCOSTAR = 'y4lxp4q2';
+
+const MODE_ID_TO_NAME = {
+    [COSTAR] : 'Co-Star',
+    [NOCOSTAR] : "No Co-Star"
+}
 
 /**
  * Converts an ISO 8601 duration string to a readable format (hh:mm:ss[.SSS]).
@@ -110,4 +116,8 @@ module.exports = {
     CAT_NAME_TO_ID,
     CHAR_NAME_TO_ID_120,
     CHAR_NAME_TO_ID_ANY,
+    MODE,
+    MODE_ID_TO_NAME,
+    COSTAR,
+    NOCOSTAR
 }
