@@ -16,7 +16,7 @@ You will see something like this:
   "filename" : "leaderboard.csv",
   "category" : "any",
   "character": "luigi",
-  }
+ }
 </pre>
 
 The filename property refers to the output csv file you will get.
