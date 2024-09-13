@@ -8,6 +8,8 @@ If you're more experienced here a quick rundown:
 Make sure to have nodejs installed.
 Clone the repository, then run 
 
+`npm install`
+
 `node .\main.js --character [CHARACTER] --category [CATEGORY]`
 
 Where [CHARACTER] is either Mario or Luigi and [CATEGORY] is either any, 120 or 242.
