@@ -7,7 +7,7 @@
 
 You don't have to know anything about git. Literally get the download for the executable <a href="https://drive.google.com/file/d/1dgUnkdk3oaWY60WOtf2eX6ynry9hMvRV/view?usp=sharing" target="_blank">here</a>
 
-## How To Use
+## How To Use (Executable)
 
 Unzip the file and open `config.json`
 
