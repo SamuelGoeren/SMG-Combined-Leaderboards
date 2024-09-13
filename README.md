@@ -41,7 +41,7 @@ This repository is aimed at non-technical users, hence the direct download link 
 
 Here's a quick explanation of how this application works.
 
-I use the [speedrun.com api](https://github.com/speedruncomorg/api) to retrieve leaderboards for SMG based on the `category` and `character` parameters.
+I use the [speedruncom api](https://github.com/speedruncomorg/api) to retrieve leaderboards for SMG based on the `category` and `character` parameters.
 
 Initially there was a problem: The leaderboard api response did not include player names, only user IDs. I thought I'd have to send individual requests for each runner to get their username from ID which...would have absolutely demolished their rate limit.
 
