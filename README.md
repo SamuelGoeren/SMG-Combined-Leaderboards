@@ -5,6 +5,10 @@ leaderboard for any category.
 
 If you're more experienced here a quick rundown:
 
+<link href="www.google.com" target="_blank">
+  Test
+</link>
+
 Make sure to have nodejs installed.
 Clone the repository, then run 
 
