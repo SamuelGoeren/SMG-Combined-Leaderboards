@@ -1,4 +1,4 @@
-Readme will be updated for non-technical users soon.
+Readme will be updated for non-technical users soon. I have to go to bed now.
 
 This program basically gets you a combined Co-Star/No Co-Star (1p/2p)
 leaderboard for any category.
