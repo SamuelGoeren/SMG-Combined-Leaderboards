@@ -74,5 +74,5 @@ I found the easiest way to build was to run
 
 `nexe [MAIN_JS_FILENAME] -o [OUTPUT_FILENAME] --build`
 
-It will take a very long the first time you do it because it automatically installs all required dependencies. After that it's pretty fast.
+It will take a very long time the first time you do it because it automatically installs all required dependencies. After that it's pretty fast.
 Do this if you want to change the source code and build into exe. But using nodejs works just fine.
