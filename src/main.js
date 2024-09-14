@@ -43,7 +43,7 @@ async function fetchLbData(endpoint, params) {
 }
 
 /*
-    returns array of arrays [username,  time] for specified category
+    returns array of arrays [place, username, time, mode, date] for specified category
     represents leaderboard
     each subarray will be a line in the csv export
 */
