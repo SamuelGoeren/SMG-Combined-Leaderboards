@@ -83,6 +83,7 @@ async function getLbDataReduced(endpoint, params) {
     }
     else{
         console.error("Unknown error: Contact HardcoreGaming on Discord.");
+        process.exit(0);
     }
 
     if(unknownPlayers){
