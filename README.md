@@ -67,7 +67,7 @@ node .\main.js --filename leaderboard.csv --character luigi --category any
 ```
 [nodejs](https://nodejs.org/)
 
-##Build
+## Build
 
 I used [nexe](https://github.com/nexe/nexe) to build my nodejs project into a single executable.
 I found the easiest way to build was to run
