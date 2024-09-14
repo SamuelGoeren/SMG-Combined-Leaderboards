@@ -70,7 +70,7 @@ node .\main.js --filename leaderboard.csv --character luigi --category any
 I used [nexe](https://github.com/nexe/nexe) to build my nodejs project into a single executable.
 I found the easiest way to build was to run
 
-`nexe .\main.js -o [OUTPUT_FILENAME] --build`
+`nexe [MAIN_JS_FILENAME] -o [OUTPUT_FILENAME] --build`
 
-It will take very long the first time you do it because it automatically installs all required dependencies. After that it's pretty fast.
+It will a take very long the first time you do it because it automatically installs all required dependencies. After that it's pretty fast.
 Do this if you want to change the source code and build into exe.
