@@ -27,8 +27,9 @@ async function fetchLbData(endpoint, params) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error(`Error: ${response.status}\nInvalid response from speedrun.com\n
+            console.error(`Error: ${response.status}\nInvalid response from speedrun.com\n
             If you think this problem is not caused by speedrun.com contact HardcoreGaming on Discord or open an issue on Github`);
+            process.exit(1);
         }
         const res = await response.json();
         return res;
@@ -83,7 +84,7 @@ async function getLbDataReduced(endpoint, params) {
     }
     else{
         console.error("Unknown error: Contact HardcoreGaming on Discord.");
-        process.exit(0);
+        process.exit(1);
     }
 
     if(unknownPlayers){
