@@ -18,12 +18,10 @@ const CSV_TABLE_HEADER = ["Place", "Name", "Time", "Mode",  "Date"]
     gets entire leaderboard data for category
 */
 async function fetchLbData(endpoint, params) {
-    
     const queryString = new URLSearchParams(params).toString();
-
     const url = `${endpoint}?${queryString}`;
-
     console.log(`Retrieving leaderboard for category: ${CATEGORY_NAME}, character: ${CHARACTER_NAME}`);
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -54,6 +52,7 @@ async function getLbDataReduced(endpoint, params) {
     const res = await fetchLbData(endpoint, params);
     let playerIndex = 0;
     let unknownPlayers = false;
+
     if (res && res.data && res.data.runs) {
         for(const pos of res.data.runs){
             const playerObj = pos.run.players[0];
@@ -94,13 +93,6 @@ async function getLbDataReduced(endpoint, params) {
     return lb;
 }
 
-async function run(endpoint, params){
-    const lb = await getLbDataReduced(endpoint, params);
-    const csvContent = arrayToCSV(lb);
-    writeCSVToFile(CSV_FILE_NAME, csvContent);
-}
-
-
 function generateQueryParameters(){
     let params = {embed: "players"};
     const categoryId = CAT_NAME_TO_ID[CATEGORY_NAME];
@@ -115,5 +107,11 @@ function generateQueryParameters(){
     return params;
 }
 
-let params = generateQueryParameters();
+async function run(endpoint, params){
+    const lb = await getLbDataReduced(endpoint, params);
+    const csvContent = arrayToCSV(lb);
+    writeCSVToFile(CSV_FILE_NAME, csvContent);
+}
+
+const params = generateQueryParameters();
 run(SMG1_LB_URL, params);
