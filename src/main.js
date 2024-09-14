@@ -81,6 +81,9 @@ async function getLbDataReduced(endpoint, params) {
             playerIndex++;
         };
     }
+    else{
+        console.error("Unknown error: Contact HardcoreGaming on Discord.");
+    }
 
     if(unknownPlayers){
         console.warn("Some players will be marked as \"unknown\" because they might have deleted their speedrun.com account.")
